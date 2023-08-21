@@ -6,8 +6,8 @@ function createRipple(event) {
     const radius = diameter / 2;
 
     circle.style.width = circle.style.height = `${diameter}px`;
-    circle.style.left = `${event.clientX - button.offsetLeft - radius}px`;
-    circle.style.top = `${event.clientY - button.offsetTop - radius}px`;
+    circle.style.left = `${event.offsetX - radius}px`;
+    circle.style.top = `${event.offsetY - radius}px`;
     circle.classList.add("ripple");
 
     const ripple = button.querySelector(".ripple");
@@ -17,4 +17,6 @@ function createRipple(event) {
 }
 
 const buttons = document.querySelectorAll("button[data-ripple]");
-for (const button of buttons) button.addEventListener("click", createRipple);
+for (const button of buttons) {
+    if (!button.classList.contains("tooltip")) button.addEventListener("click", createRipple);
+}
