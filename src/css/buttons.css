@@ -35,7 +35,6 @@
     background-color: #191e24;
     text-decoration: none;
     font-weight: bolder;
-    border-radius: 3px;
     color: var(--text-color);
     padding-left: 1rem;
     padding-right: 1rem;
@@ -50,12 +49,10 @@
 }
 
 .button:hover {
-    transition: all 0.2s;
     background-color: #171b1f;
 }
 
 .button:active {
-    transition: all 0.2s;
     scale: 95%;
 }
 
@@ -139,6 +136,10 @@
 
 .button-error:hover {
     background-color: var(--button-error-hover);
+}
+
+.button-wide {
+    width: 100%;
 }
 
 span.ripple {

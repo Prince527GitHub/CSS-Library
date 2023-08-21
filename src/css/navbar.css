@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    background-color: #1e2122;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.625rem 1.25rem;
+}
+
+.nav-header {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.2s;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    border-radius: 0.5rem;
+}
+
+.nav-header:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-header:active {
+    scale: 95%;
+}
+
+.nav-header img {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 0.625rem;
+}
+
+.nav-header h1 {
+    color: white;
+    font-size: 1.25rem;
+}
+
+.nav-item {
+    display: flex;
+    gap: 0.9375rem;
+}
+
+.nav-item a {
+    color: white;
+    text-decoration: none;
+    padding: 0.3125rem 0.625rem;
+    border-radius: 0.3125rem;
+    transition: all 0.2s;
+}
+
+.nav-item a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-item.left {
+    justify-content: flex-start;
+}
+
+.nav-item.right {
+    justify-content: flex-end;
+}
+
+@media (max-width: 48rem) {
+    .nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-header {
+        margin-bottom: 0.625rem;
+    }
+
+    .nav-item {
+        justify-content: center;
+    }
+
+    .nav-item.right {
+        margin-top: 0.625rem;
+    }
+}

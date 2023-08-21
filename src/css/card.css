@@ -1,0 +1,58 @@
+.card {
+    transition: all 0.2s;
+    text-align: center;
+    padding: 0.625rem;
+    margin: 0.625rem;
+    width: 30vw;
+}
+
+@media (max-width: 31.25rem){
+    .card {
+        transition: all 0.2s;
+        width: auto;
+    }
+}
+
+@media (width < 52.5rem) {
+    .card {
+        transition: all 0.2s;
+        width: auto;
+    }
+}
+
+.card-title {
+    transition: all 0.2s;
+    margin-bottom: 0.3125rem;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.card-description {
+    transition: all 0.2s;
+    color: #cccccccc;
+    font-size: 0.9375rem;
+    margin: 0;
+}
+
+.card-rounded {
+    border-radius: 0.625rem;
+}
+
+.card-background {
+    background-color: #1e2122;
+    padding: 0.9375rem;
+}
+
+.card-shadow {
+    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.5);
+}
+
+.card-button {
+    width: 90%;
+}
+
+.image-pixel {
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+}

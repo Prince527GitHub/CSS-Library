@@ -14,10 +14,10 @@
 }
 
 .alert {
-    padding: 15px;
-    border-radius: 4px;
-    margin-bottom: 20px;
-    font-size: 16px;
+    padding: 0.9375rem;
+    border-radius: 0.25rem;
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
 }
 
 .alert-container {
@@ -26,13 +26,13 @@
 }
 
 .alert-icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 8px;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
 }
 
 .alert-text {
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .alert-primary,
