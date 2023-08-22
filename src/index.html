@@ -125,7 +125,7 @@
         <h1 class="card-title">API</h1>
         <p class="card-description">A web api to get data from services and manipulate images.</p>
         <br>
-        <button class="button card-button button-primary">View</button>
+        <button class="button card-button button-primary button-static">View</button>
         <br>
         <br>
         <img class="card-rounded card-shadow" src="https://serversmp.xyz/img/api.png" width="90%" height="90%">
@@ -158,6 +158,27 @@
             <span class="tooltip-text">This is a tooltip.</span>
         </button>
     </div>
+
+    <h2>Modal</h2>
+
+    <div class="modal" id="modal1">
+        <div class="modal-content">
+            <span class="close-btn" data-modal="modal1">✕</span>
+            <h2>Hello! (1)</h2>
+            <p>Press ESC key or click on ✕ button to close</p>
+        </div>
+    </div>
+
+    <div class="modal" id="modal2">
+        <div class="modal-content">
+            <span class="close-btn" data-modal="modal2">✕</span>
+            <h2>Hello! (2)</h2>
+            <p>Press ESC key or click on ✕ button to close</p>
+        </div>
+    </div>
+
+    <button class="button button-primary" data-modal="modal1">Open Modal 1</button>
+    <button class="button button-secondary" data-modal="modal2">Open Modal 2</button>
 
     <script src="../dist/js/script.js"></script>
 

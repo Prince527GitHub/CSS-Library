@@ -47,6 +47,12 @@
 
     /* Tooltips */
     --tooltip-background: rgba(0, 0, 0, 0.8);
+
+    /* Modal */
+    --modal-overlay: rgba(0, 0, 0, 0.5);
+    --modal-background: #1c232a;
+    --modal-shadow: rgba(0, 0, 0, 0.2);
+    --modal-button-hover: rgba(255, 255, 255, 0.2);
 }
 
 body {
@@ -166,6 +172,10 @@ body {
 
 .button-wide {
     width: 100%;
+}
+
+.button-static:active {
+    scale: 100%;
 }
 
 span.ripple {
@@ -451,12 +461,53 @@ span.ripple {
     transform: translateX(-50%);
     background-color: var(--tooltip-background);
     color: var(--text-color);
-    padding: 5px;
-    border-radius: 5px;
+    padding: 0.3125rem;
+    border-radius: 0.3125rem;
     white-space: nowrap;
     transition: all 0.3s;
 }
 
 .tooltip:hover .tooltip-text {
     display: block;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--modal-overlay);
+    z-index: 1;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--modal-background);
+    padding: 1.25rem;
+    border-radius: 1rem;
+    box-shadow: 0rem 0rem 1.875rem var(--modal-shadow);
+}
+
+.close-btn {
+    position: absolute;
+    top: 0.625rem;
+    right: 0.625rem;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.close-btn:hover {
+    background-color: var(--modal-button-hover);
+}
+
+.close-btn:active {
+    scale: 95%;
 }

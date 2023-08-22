@@ -20,3 +20,33 @@ const buttons = document.querySelectorAll("button[data-ripple]");
 for (const button of buttons) {
     if (!button.classList.contains("tooltip")) button.addEventListener("click", createRipple);
 }
+
+const openModalButtons = document.querySelectorAll("button[data-modal]")
+for (const button of openModalButtons) {
+    button.addEventListener("click", () => {
+        const id = button.getAttribute("data-modal");
+        openModal(id);
+
+        document.addEventListener("keydown", (event) => event.key === "Escape" ? closeModal(id) : null);
+    });
+}
+
+const closeButtons = document.querySelectorAll(".close-btn");
+for (const button of closeButtons) {
+    button.addEventListener("click", () => {
+        const id = button.getAttribute("data-modal");
+        closeModal(id);
+
+        document.addEventListener("keydown", (event) => event.key === "Escape" ? closeModal(id) : null);
+    });
+}
+
+function closeModal(id) {
+    const modal = document.getElementById(id);
+    modal.style.display = "none";
+}
+
+function openModal(id) {
+    const modal = document.getElementById(id);
+    modal.style.display = "block";
+}
